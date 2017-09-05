@@ -1,4 +1,7 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.shangwfa'
+
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
     buildToolsVersion rootProject.ext.android.buildToolsVersion
@@ -30,6 +33,7 @@ android {
     dataBinding {
         enabled true
     }
+
 
     packagingOptions {
         exclude 'META-INF/DEPENDENCIES'
@@ -86,5 +90,3 @@ dependencies {
 repositories {
     mavenCentral()
 }
-
-apply from: "bintray.gradle"//要放下面，放上面编译通不过
